@@ -444,14 +444,14 @@ revealGroups.forEach(selector => {
   })
 })
 
+
 if ('IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver(
     entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible')
-        } else {
-          entry.target.classList.remove('is-visible')
+          revealObserver.unobserve(entry.target)
         }
       })
     },
@@ -469,6 +469,7 @@ if ('IntersectionObserver' in window) {
     element.classList.add('is-visible')
   })
 }
+
 
 // CONTACT FORM — TELEGRAM INTEGRATION
 
