@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://juliabab0730.github.io/purespace/sitemap.xml
